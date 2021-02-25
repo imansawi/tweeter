@@ -1,0 +1,11 @@
+#tweet-header {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 100%;
+  margin-top: 120px;
+  background-color: #f5845a;
+  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+  align-items: center;
+  justify-content: center;
+}

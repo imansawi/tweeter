@@ -1,0 +1,41 @@
+.new-tweet {
+  background-color: #eeb47d;
+  padding-right: 2em;
+  padding-left: 2em;
+  width: 80%;
+  margin: auto;
+}
+  
+#tweet-text {
+  padding: 1em;
+  display: block;
+  width: 100%;
+  resize: none;
+  outline: none;
+  margin: 0.25em 0 0.5em 0;
+  border: 0 none;
+  background: transparent;
+  word-wrap: break-word;
+  border-bottom: 4px solid #545149;
+}
+
+footer.form-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ 
+}
+
+button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+.counter {
+  font-weight: 700;
+}
+
+.invalid {
+  color:red;
+}
+  

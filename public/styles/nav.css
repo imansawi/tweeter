@@ -1,0 +1,16 @@
+#nav-bar {
+  position: fixed;
+  top: 0;
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  padding: 1.5em;
+  justify-content: space-between;
+}
+
+#nav-title {
+  font-family: 'Bungee', sans-serif;
+}
