@@ -1,8 +1,7 @@
 .new-tweet {
-  background-color: #eeb47d;
-  padding-right: 2em;
-  padding-left: 2em;
-  width: 80%;
+  background-color: #d3da99;
+  padding: 2em;
+  width: 100%;
   margin: auto;
 }
   
@@ -16,7 +15,7 @@
   border: 0 none;
   background: transparent;
   word-wrap: break-word;
-  border-bottom: 4px solid #545149;
+  border-bottom: 4px solid black;
 }
 
 footer.form-footer {
