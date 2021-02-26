@@ -1,5 +1,5 @@
 const maxVal = 140;
-function characterCounter() {
+const characterCounter = function () {
   const counter = $("#tweet-text").val().length;
 
   $(".counter").text(maxVal - counter);
@@ -7,7 +7,7 @@ function characterCounter() {
     ? $(".counter").addClass("invalid")
     : $(".counter").removeClass("invalid");
   $(".errorMessage").slideUp("slow");
-}
+};
 
 $(document).ready(function () {
   $("#tweet-text").on("input", characterCounter);

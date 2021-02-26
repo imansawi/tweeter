@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
+  <!-- Media Queries -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
-  <!-- <div style="width:500px;height:100px;border:1px solid rgb(0, 0, 0);">Tweeter!</div>
+  <div style="width:500px;height:100px;border:1px solid rgb(0, 0, 0);">Tweeter!</div>
     <div id="box">
       <img src="../images/profile-hex.png" align="center" style="width:100px;height:100px" />
-    </div> -->
+    </div>
 
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -51,7 +53,6 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <!-- <h2>Compose Tweet</h2> -->
       <form action="/tweets" method="POST">
         <label>What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
@@ -59,27 +60,13 @@
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </footer>
-        <h3 class="errorMessage"></h3>
       </form>
-      <h3 class="errorMessage"></h3>
+      <h4 class="errorMessage"></h4>
     </section>
     <section class="tweet-container">
-      <article class="tweet">
-        <header>
-          <div class="tweet-image">
-            <img src="/images/newton.png"> Newton
-          </div>
-          <div>
-            @SirIsaac
-          </div>
-        </header>
-        <p>If I have seen further it is by standing on the shoulders of giants.</p>
-        <footer>
-          <p>10 days ago</p>
-        </footer>
-      </article>
     </section>
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </body>
 
 </html>
