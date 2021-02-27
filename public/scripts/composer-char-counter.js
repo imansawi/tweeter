@@ -1,3 +1,6 @@
+// Function Counts Characters for The Tweet Compose Form
+//======================================================
+
 const maxVal = 140;
 const characterCounter = function () {
   const counter = $("#tweet-text").val().length;
