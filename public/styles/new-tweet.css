@@ -1,14 +1,14 @@
 .new-tweet {
   background-color: #f5f5f3;
   padding: 2em;
-  width: 100%;
+  width: 80%;
   margin: auto;
 }
   
 #tweet-text {
   padding: 1em;
   display: block;
-  width: 100%;
+  width: 80%;
   resize: none;
   outline: none;
   margin: 0.25em 0 0.5em 0;

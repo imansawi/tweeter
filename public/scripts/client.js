@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // Function Creates Tweet Element for Each Tweet
-  //==================================================
+
   const createTweetElement = function (tweet) {
     const $tweet = $("<article>").addClass("tweet");
 
@@ -11,7 +11,7 @@ $(document).ready(function () {
     $handle = $("<p>").text(tweet.user.handle);
     $tweetContent = $("<p>").text(tweet.content.text);
     $footer = $("<footer>");
-    $date = $("<p>").text(moment(tweet.created_at).calendar());
+    $date = $("<p>").text(moment(tweet.created_at).fromNow());
 
     // Appending DOM Elements
     $header.append($avatar, $name, $handle);
@@ -21,8 +21,8 @@ $(document).ready(function () {
   };
 
   // Function Loops Through Tweets Takes Return Value
-  // and Appends itto The Tweets Container
-  //===================================================
+  // and Appends it to The Tweets Container
+
   const renderTweets = function (tweets) {
     for (tweet of tweets) {
       let $tweet = createTweetElement(tweet);
@@ -31,15 +31,14 @@ $(document).ready(function () {
   };
 
   // Post Request Function to Submit a Form
-  //===================================================
-  const postRequest = () => {
+
+  const submitTweet = () => {
     $("form").on("submit", function (event) {
       event.preventDefault();
 
       if (!$("textarea", this).val()) {
         $(".errorMessage").slideDown("slow");
         $(".errorMessage").text("Compose a Tweet!");
-        return;
       } else if ($("textarea", this).val().length > 140) {
         $(".errorMessage").slideDown("slow");
         $(".errorMessage").text("Ooops!! Exceeded Charactets Limit!");
@@ -52,16 +51,17 @@ $(document).ready(function () {
         }).done(function () {
           $("textarea").val("");
           $("#tweet-container").empty();
+          characterCounter();
           loadTweets();
         });
       }
     });
   };
 
-  postRequest();
+  submitTweet();
 
-  // Get Request Function to Submi a Form
-  //===================================================
+  // Get Request Function to Submit a Form
+
   const loadTweets = () =>
     $.ajax({
       type: "GET",
