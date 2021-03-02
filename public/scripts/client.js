@@ -6,12 +6,12 @@ $(document).ready(function () {
 
     // Creating DOM Elements
     $header = $("<header>");
-    $avatar = $('<img class="avatar">').attr("src", tweet.user.avatars);
+    $avatar = $('<img class="avatar">').attr("src", tweet.user.avatars);;
     $name = $("<h2>").text(tweet.user.name);
     $handle = $("<p>").text(tweet.user.handle);
     $tweetContent = $("<p>").text(tweet.content.text);
-    $footer = $("<footer>");
     $date = $("<p>").text(moment(tweet.created_at).fromNow());
+    $footer = $("<footer>").text("🏴 📟 ❤");
 
     // Appending DOM Elements
     $header.append($avatar, $name, $handle);
